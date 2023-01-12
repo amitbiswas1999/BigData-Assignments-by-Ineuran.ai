@@ -89,6 +89,18 @@ limit 1;
 
 
 
+c.  Calculate the total sales for each quarter
+
+select qtr_id,sum(sales) as total_sales from sales_order_orc 
+group by qtr_id
+
+
+d. In which quarter sales was minimum
+
+select qtr_id,sum(sales) as total_sales from sales_order_orc 
+group by qtr_id 
+order by total_sales asc
+limit 1
 
 
 e. In which country sales was maximum and in which country sales was minimum
