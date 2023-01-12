@@ -89,3 +89,19 @@ limit 1;
 
 
 
+
+
+e. In which country sales was maximum and in which country sales was minimum
+
+select country,sum(sales) as total_sales from sales_order_orc 
+group by country
+order by total_sales desc
+limit 1;
+
+
+select country,sum(sales) as total_sales from sales_order_orc 
+group by country
+order by total_sales
+limit 1;
+
+
